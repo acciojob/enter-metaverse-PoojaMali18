@@ -1,13 +1,18 @@
-const enterButton = document.getElementById("enterBtn");
-const statusParagraph = document.getElementById("status");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text</title>
+</head>
+<body>
+    <p id="status">Enter the Metaverse</p>
+    <button id="enterBtn" onclick="changeText()">Enter</button>
 
-// Function to change the text in the p tag
-function changeText() {
-    const h1Tag = document.createElement("h1");
-    h1Tag.textContent = "Entered Metaverse";
-    statusParagraph.innerHTML = ''; // Clear any existing content
-    statusParagraph.appendChild(h1Tag); // Append the new h1 tag
-}
-
-// Add event listener to the button
-enterButton.addEventListener("click", changeText);
+    <script>
+        function changeText() {
+            document.getElementById("status").innerHTML = "<h1>Entered Metaverse</h1>";
+        }
+    </script>
+</body>
+</html>
